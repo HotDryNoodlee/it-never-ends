@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity = new Vector2(movespeed, rb.velocity.y);
         if (Input.GetKey(KeyCode.Space))
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
             power.transform.position = new Vector2(power.transform.position.x + Random.Range(20, 25), power.transform.position.y);
         } else if(collision.gameObject == enemy1 || collision.gameObject == enemy2)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             //Debug.Log("game over");
         }
     }

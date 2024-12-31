@@ -17,7 +17,7 @@ public class BoundryMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float distancemoved = cam.transform.position.x * (1 - parallaxEffect);
         float distance_to_move = cam.transform.position.x * parallaxEffect;
